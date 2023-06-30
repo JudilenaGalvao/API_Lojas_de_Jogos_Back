@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-30T01:43:12.279Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="1yan6XQX7vaBv5q116xo" version="21.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-30T01:45:26.513Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="QgJQ-gyk44A5YwPTS3TL" version="21.5.2" type="github">
   <diagram name="Página-1" id="LYa6vVmkQ6kkYleELkHt">
     <mxGraphModel dx="880" dy="484" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -10,7 +10,7 @@
         <mxCell id="S2bd-8xSc3iq0MVG18dw-5" value="Compra" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="350" y="40" width="160" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="S2bd-8xSc3iq0MVG18dw-38" value="ID&lt;br&gt;Data&lt;br&gt;FK_usuario&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="S2bd-8xSc3iq0MVG18dw-5">
+        <mxCell id="S2bd-8xSc3iq0MVG18dw-38" value="ID&lt;br&gt;Data&lt;br&gt;Preço_Total&lt;br&gt;FK_usuario&lt;br&gt;&lt;br&gt;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="S2bd-8xSc3iq0MVG18dw-5">
           <mxGeometry y="26" width="160" height="84" as="geometry" />
         </mxCell>
         <mxCell id="S2bd-8xSc3iq0MVG18dw-11" value="Usuario" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
