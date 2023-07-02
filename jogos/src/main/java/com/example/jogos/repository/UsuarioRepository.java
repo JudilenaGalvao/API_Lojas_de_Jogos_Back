@@ -1,0 +1,7 @@
+package com.example.jogos.repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.example.jogos.model.Usuario;
+
+public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
+    
+}
