@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import com.example.jogos.model.Jogo;
+import com.example.jogos.domain.Jogo;
 import com.example.jogos.service.JogoService;
 import java.util.Optional;
 
@@ -26,52 +26,18 @@ public class JogoController {
 
 
     @GetMapping
-	public List<Jogo> listAll(){
-		return service.getAll();
-	}
-
-    
-    @GetMapping(path = {"/{id}"})
-	public ResponseEntity<Jogo> getOne(@PathVariable Long id){
-
-		Optional<Jogo> jogoOptional = service.findById(id);
-
-		if (jogoOptional.isEmpty()){
-			return ResponseEntity.notFound().build();
-		}else {
-
-
-            Jogo jogo = jogoOptional.get();
-
-			return ResponseEntity.ok().body(jogo);
-		}
-
+    public List<Jogo> list(){
+        return this.service.list();
     }
-    @PostMapping
-	public Jogo insert(@RequestBody Jogo c){
-		return service.insert(c);
-	}
 
+	@PutMapping("{id}")
+    public Jogo update(@RequestBody Jogo j, @PathVariable Long id){
+        return this.service.update(j, id);
+    }
 
-    @PutMapping(path = "/{id}")
-	public ResponseEntity<Jogo> update(@PathVariable Long id, @RequestBody Jogo c){
-		return service
-				.findById(id)
-				.map( record -> {
-					service.saveAndFlush(c);
-					return ResponseEntity.ok().body(c);
-				}).orElse(ResponseEntity.notFound().build());
-	}
-
-    
-    @DeleteMapping(path = "/{id}")
-	public ResponseEntity<?> delete(@PathVariable Long id){
-		return service
-				.findById(id)
-				.map( record -> {
-					service.delete(record);
-					return ResponseEntity.status(202).build();
-				}).orElse(ResponseEntity.notFound().build());
-	}
+	@DeleteMapping("{id}")
+    public void delete(@PathVariable Long id){
+        this.service.delete(id);
+    }
 
 }

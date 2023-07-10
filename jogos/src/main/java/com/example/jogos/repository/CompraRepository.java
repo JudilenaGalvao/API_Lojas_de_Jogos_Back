@@ -1,8 +1,8 @@
 package com.example.jogos.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.example.jogos.model.Compra;
+import com.example.jogos.domain.Compra;
 
-public interface CompraRepository extends JpaRepository<Compra, Long>{
+public interface CompraRepository extends IGenericRepository<Compra>{
     
 }
