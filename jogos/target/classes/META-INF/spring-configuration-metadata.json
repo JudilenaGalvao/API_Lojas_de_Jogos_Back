@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "rsa",
+      "type": "com.example.jogos.config.RsaKeyProperties",
+      "sourceType": "com.example.jogos.config.RsaKeyProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "rsa.private-key",
+      "type": "java.security.interfaces.RSAPrivateKey",
+      "sourceType": "com.example.jogos.config.RsaKeyProperties"
+    },
+    {
+      "name": "rsa.public-key",
+      "type": "java.security.interfaces.RSAPublicKey",
+      "sourceType": "com.example.jogos.config.RsaKeyProperties"
+    }
+  ],
+  "hints": []
+}
