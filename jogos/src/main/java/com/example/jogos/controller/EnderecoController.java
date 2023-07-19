@@ -1,11 +1,9 @@
 package com.example.jogos.controller;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.example.jogos.domain.Endereco;
 import com.example.jogos.service.EnderecoService;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/endereco")

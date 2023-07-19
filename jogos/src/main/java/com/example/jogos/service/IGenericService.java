@@ -10,5 +10,7 @@ public interface IGenericService<E extends AbstractEntity> {
     public E update(E e, Long id);
     public void delete(Long id);
     public List<E> list();
+    public E getById(Long id);
+
 
 }

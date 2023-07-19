@@ -5,14 +5,10 @@ import java.util.List;
 import org.modelmapper.ModelMapper;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
-import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -23,7 +19,6 @@ import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @Entity
 
 public class Compra  extends AbstractEntity {
@@ -43,6 +38,7 @@ public class Compra  extends AbstractEntity {
     List<Jogo> jogo;
 
 
+    @Data
     public static class DtoRequest {
         @NotBlank(message = "Data da compra em branco")
         Date data;
@@ -55,6 +51,10 @@ public class Compra  extends AbstractEntity {
 
         @NotEmpty(message = "Lista de jogos não pode ser vazia")
         List<Jogo> jogos;
+
+        public static Compra convertToEntity(DtoRequest dto, ModelMapper mapper){
+            return mapper.map(dto, Compra.class);
+        }
 
     }
 
@@ -71,15 +71,6 @@ public class Compra  extends AbstractEntity {
         }
 
     }
-
-    
-
-
-
-
-
-
-
 
 
 }
